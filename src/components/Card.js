@@ -40,7 +40,7 @@ function Card({ card }) {
         <Modal
           onClose={closeModal}>
           <div className={styles.modal__container}>
-            <div className="image-container">
+            <div className="image-container modal">
               <Image
                 src={card.link}
                 width={390}

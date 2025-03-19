@@ -6,3 +6,18 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: $background;
 }
+
+.image-container,
+.image-container img {
+    max-width: 390px;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+
+    .image-container,
+    .image-container img {
+        max-width: 200px;
+        max-height: 200px;
+    }
+}

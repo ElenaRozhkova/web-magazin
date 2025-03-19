@@ -25,25 +25,46 @@ function Card({ card }) {
           <h4>{card.kategorie}</h4>
         </div>
         <h2 className={styles.card__title}>{card.name}</h2>
-        <Image
-          src={card.link}
-          width={390}
-          height={390}
-          style={{ maxWidth: '390px', maxHeight: '390px', width: '100%', height: '100%', margin: 'auto' }}
-          alt={card.name}
-        />
+        <div className="image-container">
+          <Image
+            src={card.link}
+            width={390}
+            height={390}
+
+            alt={card.name}
+          />
+        </div>
         <h3 className={styles.card__subtitle}>{card.subtitle}</h3>
       </article>
       {isModalOpen && (
         <Modal
-          onClose={closeModal}
-          link={card.link}
-          kategorie={card.kategorie}
-          name={card.name}
-          content={card.content}
-          subtitle={card.subtitle}
-          categoryColors={categoryColors}
-        />
+          onClose={closeModal}>
+          <div className={styles.modal__container}>
+            <div className="image-container">
+              <Image
+                src={card.link}
+                width={390}
+                height={390}
+                alt={card.name}
+              /></div>
+
+            <div className={styles.container__right}>
+              <div className={styles.container__text}>
+                <div className={styles.card__kategorie} style={{ backgroundColor: categoryColors[card.kategorie] }}>
+                  <h4>{card.kategorie}</h4>
+                </div>
+                <h2 className={styles.card__title}>{card.name}</h2>
+                <p>{card.content}</p>
+              </div>
+              <div className={styles.container__buttons}>
+                <button type="button" className={styles.payButton}> Kaufen </button>
+                <h3 className={styles.card__subtitle}>{card.subtitle}</h3>
+              </div>
+            </div>
+          </div>
+        </Modal>
+
+
       )}
     </>
   );

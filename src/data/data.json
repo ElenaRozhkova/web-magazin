@@ -1,0 +1,68 @@
+{
+    "cards": [
+        {
+            "id": 1,
+            "kategorie": "Frontend",
+            "name": "React",
+            "link": "/images/Dots.png",
+            "subtitle": "750 Punkte",
+            "content": "Entdecke die Kraft von React und baue moderne, interaktive Benutzeroberflächen mit Leichtigkeit!"
+        },
+        {
+            "id": 2,
+            "kategorie": "Middleware",
+            "name": "API-Gateway",
+            "link": "/images/Shell.png",
+            "subtitle": "1450 Punkte",
+            "content": "API-Gateways vereinfachen die Kommunikation zwischen Microservices und sorgen für Sicherheit und Skalierbarkeit!"
+        },
+        {
+            "id": 3,
+            "kategorie": "DevOps",
+            "name": "CI/CD-Pipeline",
+            "link": "/images/Asterisk.png",
+            "subtitle": "550 Punkte",
+            "content": "Automatisiere deine Entwicklungsprozesse mit CI/CD-Pipelines für schnelle und zuverlässige Bereitstellungen!"
+        },
+        {
+            "id": 4,
+            "kategorie": "Frontend",
+            "name": "Vue.js",
+            "link": "/images/Soft Flower.png",
+            "subtitle": "1750 Punkte",
+            "content": "Vue.js ist das flexible und leistungsstarke Framework für moderne Webanwendungen – einfach und effizient!"
+        },
+        {
+            "id": 5,
+            "kategorie": "Full-Stack",
+            "name": "Full-Stack-Entwicklung",
+            "link": "/images/Vector.png",
+            "subtitle": "700 Punkte",
+            "content": "Werden Sie ein Full-Stack-Entwickler und beherrschen Sie sowohl Frontend als auch Backend mit einem einzigen Stack!"
+        },
+        {
+            "id": 6,
+            "kategorie": "Backend",
+            "name": "Node.js",
+            "link": "/images/BEM.png",
+            "subtitle": "750 Punkte",
+            "content": "Node.js revolutioniert die serverseitige Entwicklung mit schneller Performance und einer riesigen Community!"
+        },
+        {
+            "id": 7,
+            "kategorie": "Frontend",
+            "name": "UI/UX-Design",
+            "link": "/images/Leaf.png",
+            "subtitle": "750 Punkte",
+            "content": "Erstelle beeindruckende Benutzeroberflächen, die sowohl schön als auch benutzerfreundlich sind!"
+        },
+        {
+            "id": 8,
+            "kategorie": "Backend",
+            "name": "API-Entwicklung",
+            "link": "/images/Mithosis.png",
+            "subtitle": "750 Punkte",
+            "content": "Entwickle leistungsstarke APIs, die nahtlos mit Frontend und anderen Diensten kommunizieren!"
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+@import 'variables';
+
+
+.card__kategorie {
+    color: $primary;
+    font-size: $baseFontSize;
+    font-weight: 400;
+    padding: 10px 20px;
+    background: $category1;
+    display: inline-block;
+    border-radius: 50px;
+    width: fit-content;
+}
+
+.card__title {
+    font-size: $titleFontSize;
+    font-weight: 500;
+    color: $secondary;
+}
+
+.card__subtitle {
+    font-size: $mainFontSize;
+    font-weight: 500;
+    color: $secondary;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 648px;
+    width: 100%;
+    padding: $defaultPadding;
+    background: $primary;
+    border-radius: 60px;
+    cursor: pointer;
+}
+
+.card:hover {
+    background: $primaryLight;
+}

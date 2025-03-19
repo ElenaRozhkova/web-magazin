@@ -1,0 +1,19 @@
+@import './../styles/variables';
+
+.main {
+  padding: $defaultPadding;
+
+  display: flex;
+  justify-content: center;
+}
+
+.cards {
+  max-width: $maxPageWidth;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+
+}

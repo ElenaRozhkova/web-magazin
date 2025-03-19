@@ -1,0 +1,95 @@
+@import 'variables';
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $overlayBackground;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background-color: $background;
+    padding: $defaultPadding;
+    border-radius: $defaultBorderRadius;
+    max-width: $maxPageWidth;
+    width: 100%;
+    position: relative;
+    margin: $defaultPadding;
+}
+
+.modal p {
+    font-size: $mainFontSize;
+    color: $secondary;
+}
+
+.modal__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 40px;
+    max-width: 1114px;
+    flex-wrap: wrap-reverse;
+    width: 100%;
+}
+
+.modal__container>div:first-child {
+    width: 452px; // Фиксированная ширина для изображения
+    flex-shrink: 0; // Запрещаем сжимание
+}
+
+.container__right {
+    flex-grow: 1; // Занимает всё оставшееся пространство
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; // Распределяет пространство между элементами
+    gap: 20px; // Отступ между элементами
+    max-width: 614px;
+}
+
+.container__text {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.closeButton {
+    position: absolute;
+    top: $defaultPadding;
+    right: $defaultPadding;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.payButton {
+    max-width: 200px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: $baseFontSize;
+}
+
+.container__buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .modal__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal__container>div:first-child {
+        width: 100%; // Изображение занимает всю ширину
+    }
+}

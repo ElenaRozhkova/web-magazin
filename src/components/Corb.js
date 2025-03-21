@@ -57,7 +57,7 @@ const Corb = ({ handleKaufen }) => {
                             </li>
                         ))
                     ) : (
-                        <li className={styles.empty}>Der Warenkorb ist leer.</li>
+                        <h2 className={styles.card_name}>Der Warenkorb ist leer.</h2>
                     )}
                 </ul>
             </div>

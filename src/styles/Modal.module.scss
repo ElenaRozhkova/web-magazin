@@ -15,7 +15,7 @@
 
 .modal {
     background-color: $background;
-    padding: $defaultPadding;
+    padding: $modalPadding;
     border-radius: $defaultBorderRadius;
     max-width: $maxPageWidth;
     width: 100%;
@@ -30,8 +30,8 @@
 
 .closeButton {
     position: absolute;
-    top: $defaultPadding;
-    right: $defaultPadding;
+    top: $modalPadding;
+    right: $modalPadding;
     background: none;
     border: none;
     cursor: pointer;

@@ -1,0 +1,76 @@
+@import 'variables';
+
+
+.card_subtitle {
+    color: $secondary;
+    font-size: $mainFontSize;
+}
+
+.corb {
+
+
+    h3 {
+        color: $secondary;
+        font-size: $mainFontSize;
+    }
+
+    .cards {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .card {
+        margin-top: 20px;
+        list-style-type: none;
+        padding-left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 2px solid $primary;
+        padding-bottom: 5px;
+    }
+
+    .card_left {
+        display: flex;
+        flex-basis: 85%;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding-bottom: 15px;
+    }
+
+    .card_name {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .id {
+        color: $secondary;
+        font-size: $baseFontSize;
+        padding: 11px 17px !important;
+        border-radius: 50%;
+        width: fit-content;
+        background: $primary;
+        border: none;
+        margin-right: 20px;
+    }
+
+    .title {
+        color: $secondary;
+        font-size: $titleFontSize;
+
+    }
+
+    .btn_delete img {
+        cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+        .title {
+            font-size: 1.7em;
+        }
+    }
+
+}

@@ -1,5 +1,5 @@
 'use client';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import styles from '../styles/Corb.module.scss';
 import stylesBtn from '../styles/Card.module.scss';
 import Image from 'next/image';
@@ -7,9 +7,11 @@ import { CardContext } from '../context/CardContext';
 
 const Corb = ({ handleKaufen }) => {
     const { cards, deleteCard } = useContext(CardContext);
+    const [isLeer, setIsLeer] = useState(cards.length === 0);
 
     const handleDelete = (id) => {
         deleteCard(id); // Используйте функцию deleteCard из контекста
+        setIsLeer(cards.length === 1);
     };
     // Вычисляем сумму всех card.subtitle
     // Вычисляем сумму всех чисел, извлеченных из card.subtitle
@@ -58,13 +60,19 @@ const Corb = ({ handleKaufen }) => {
                         ))
                     ) : (
                         <h2 className={styles.card_name}>Der Warenkorb ist leer.</h2>
+
                     )}
                 </ul>
             </div>
-            <div className={stylesBtn.container__buttons}>
-                <button type="button" className={stylesBtn.payButton} onClick={handleKaufen}>Kaufen</button>
-                <h3 className={styles.card_subtitle}>{summe} {text}</h3>
-            </div>
+            {!isLeer && ( // Показываем кнопку и сумму, если корзина не пуста
+                <div className={stylesBtn.container__buttons}>
+                    <button type="button" className={stylesBtn.payButton} onClick={handleKaufen}>
+                        Kaufen
+                    </button>
+                    <h3 className={styles.card__subtitle}>{summe} {text}</h3>
+                </div>
+            )}
+
         </>
     );
 };

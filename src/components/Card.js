@@ -29,6 +29,7 @@ function Card({ card }) {
   const handleKaufen = () => {
     setIsModalOpenCorb(false);
     setIsModalKaufen(true);
+    clearCart();
   };
 
   return (

@@ -4,13 +4,28 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../styles/Header.module.scss';
+import { CardContext } from '../context/CardContext';
+import { Modal } from './../components/Modal';
+import Corb from './Corb';
+import ModalIstGekauft from './ModalIstGekauft';
 
 function Header() {
   const [cartItems, setCartItems] = useState(0);
+  const [isModalOpenCorb, setIsModalOpenCorb] = useState(false);
+
 
   const addToCart = () => {
     setCartItems((prev) => prev + 1);
   };
+
+  const handleInCorb = () => {
+    setIsModalOpenCorb(true);
+  };
+
+  const handleKaufen = () => {
+    setIsModalOpenCorb(false);
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.root_container}>
@@ -22,7 +37,7 @@ function Header() {
             height={50}
           />
         </Link>
-        <Link href="/">
+        <Link href="/" onClick={handleInCorb}>
           <Image
             src="/images/corb.svg"
             alt="Logo"
@@ -31,6 +46,12 @@ function Header() {
           />
         </Link>
       </div>
+      {isModalOpenCorb && (
+        <Modal onClose={() => setIsModalOpenCorb(false)}>
+          <Corb onClose={() => setIsModalOpenCorb(false)} handleKaufen={handleKaufen} />
+        </Modal>
+      )}
+
     </header>
   );
 }

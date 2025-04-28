@@ -6,7 +6,7 @@ import Card from "@/components/Card";
 import '@/styles/globals.scss'
 import styles from './page.module.scss';
 import { CardProvider } from '@/context/CardContext';
-import KartenData from '@/components/KartenData';
+//import KartenData from '@/components/KartenData';
 
 
 
